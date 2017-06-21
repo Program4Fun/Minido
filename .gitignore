@@ -55,7 +55,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
-# css frameworks
-semantic/
-semantic.json
