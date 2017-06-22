@@ -1,0 +1,60 @@
+@font-face {
+    font-family: pageFont;
+    src: url('./fonts/Sansation_Light.ttf')
+}
+* {
+    font-family: pageFont;
+}
+html, body {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: lightgoldenrodyellow;
+}
+#page-container {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+}
+#help-message {
+    flex: 0 1 25px;
+    width: 100%;
+    background-color: lightgray;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 2s;
+}
+#content-container {
+    flex: 1 1 100%;
+    /*background-color: snow;*/
+}
+#leading-question {
+    text-align: center;
+    font-size: 54px;
+}
+#task-input {
+    display: block;
+    margin: auto;
+    font-size: 36px;
+    text-align: center;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background-color: transparent;
+}
+#task-input:focus {
+    outline: none;
+}
+#task-list {
+    list-style-type: none;
+    padding: 0;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+#task-list li {
+    
+}
