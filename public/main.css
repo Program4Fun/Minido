@@ -3,7 +3,7 @@
     src: url('./fonts/Sansation_Light.ttf')
 }
 * {
-    font-family: pageFont;
+    font-family: 'Source Sans Pro';
 }
 html, body {
     position: absolute;
@@ -11,7 +11,6 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: lightgoldenrodyellow;
 }
 #page-container {
     display: flex;
@@ -22,6 +21,9 @@ html, body {
 #help-message {
     flex: 0 1 25px;
     width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
     background-color: lightgray;
     opacity: 0;
     transition-property: opacity;
@@ -29,11 +31,12 @@ html, body {
 }
 #content-container {
     flex: 1 1 100%;
-    /*background-color: snow;*/
+    text-align: center;
 }
 #leading-question {
     text-align: center;
     font-size: 54px;
+    font-family: pageFont;
 }
 #task-input {
     display: block;
@@ -47,6 +50,7 @@ html, body {
 }
 #task-input:focus {
     outline: none;
+    border-bottom-color: lightblue;
 }
 #task-list {
     list-style-type: none;
@@ -56,5 +60,20 @@ html, body {
     margin-top: 60px;
 }
 #task-list li {
-    
+    position: relative;
+    background-color: lightgoldenrodyellow;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 28px;
+    box-shadow: 1px 1px 2px #cccccc;
+}
+#task-list li:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 3px #cccccc;
+    top: -2px;
+}
+#task-list li:active {
+    box-shadow: 1px 1px 2px #cccccc;
+    top: 0;
 }
