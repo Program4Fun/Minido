@@ -4,12 +4,16 @@
   "description": "Mini todo app using MVC pattern.",
   "main": "index.js",
   "scripts": {
-    
+    "test": "node_modules/.bin/mocha public/test -u bdd -c --recursive --watch"
   },
   "dependencies": {
+    "chance": "^1.0.10",
     "firebase-tools": "^3.9.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/program4fun"

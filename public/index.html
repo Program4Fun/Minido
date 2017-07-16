@@ -5,30 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Minido</title>
-    
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-    <link rel="stylesheet" href="./main.css" />
-    <link rel="stylesheet" href="./responsive.css">
+
+    <!-- Fonts (from fonts.google.com) -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <div id="page-container">
-        <!-- Help message segment - HIDDEN BY DEFAULT! -->
-        <div id="help-message">
-            <!-- CHANGE THIS MESSAGE! -->
-            <p>This is a custom message, just for you!</p>
-        </div>
-        <!-- Main page content -->
-        <div id="content-container">
-            <h1 id="leading-question">What do you need to do?</h1>
-            <input id="task-input" type="text" placeholder="I need to..." minlength="2" maxlength="50">
-            <ul id="task-list"></ul>
-        </div>
-    </div>
-
-    <!-- Vendors -->
-    <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
+    <h1 id="taskHeader">What do you need to do?</h1>
+    <input type="text" id="taskInput" placeholder="I need to...">
+    <ul id="taskList"></ul>
 </body>
 </html>
