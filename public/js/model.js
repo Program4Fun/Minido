@@ -5,7 +5,7 @@ if (typeof window === "undefined") {
     var chance = new Chance()
 
     // Get the event object.
-    var EventC = require('./yishai.js')
+    var EventC = require('./event.js')
 }
 
 function Model() {
