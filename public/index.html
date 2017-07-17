@@ -17,5 +17,18 @@
     <h1 id="taskHeader">What do you need to do?</h1>
     <input type="text" id="taskInput" placeholder="I need to...">
     <ul id="taskList"></ul>
+
+    <!-- Scripts -->
+    <script src="js/event.js"></script>
+    <script src="assets/chance.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
+    <script>
+        var model = new Model(),
+            view = new View(model),
+            controller = new Controller(view, model)
+    </script>
 </body>
 </html>

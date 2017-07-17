@@ -17,7 +17,7 @@ html, body {
     font-size: 2em;
     padding: 0;
 }
-#taskList li {
+#taskList li label {
     padding: 5px 0;
     margin: 5px 0;
     cursor: pointer;
@@ -25,4 +25,7 @@ html, body {
 #taskList li:hover {
     background-color: rosybrown;
     color: white;
+}
+.done {
+    text-decoration: line-through;
 }

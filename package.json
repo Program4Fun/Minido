@@ -4,7 +4,8 @@
   "description": "Mini todo app using MVC pattern.",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha public/test -u bdd -c --recursive --watch"
+    "test": "node_modules/.bin/mocha public/test/unit/ -u bdd -c --recursive",
+    "test:watch": "node_modules/.bin/mocha public/test/unit/ -u bdd -c --recursive --watch"
   },
   "dependencies": {
     "chance": "^1.0.10",
