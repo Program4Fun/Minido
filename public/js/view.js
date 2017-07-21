@@ -36,22 +36,19 @@ View.prototype = {
         cb.checked = task.done
         label.appendChild(cb)
         label.appendChild(document.createTextNode(task.title))
-        /* var d = document.createElement('button')
+        var d = document.createElement('button')
         d.appendChild(document.createTextNode('X')) 
-        listItem.appendChild(d) */
+        d.onclick = this.removeTask.bind(this, d)
         listItem.appendChild(label)
+        listItem.appendChild(d) 
 
         this.taskList.appendChild(listItem)
     },
     /**
      * Remove task from the tasks list.
-     * 
-     * @param {String} id the id of the task to remove
      */
-    removeTask(id) {
-        var listItem = document.getElementById(id)
-
-        this.taskList.removeChild(listItem)
+    removeTask(elem) {
+        this.taskList.removeChild(elem.parentElement)
     },
     /**
      * Change task item checked state based on task done state.
