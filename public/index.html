@@ -18,10 +18,19 @@
     <h1 id="taskHeader">What do you need to do?</h1>
     <input type="text" id="taskInput" placeholder="I need to...">
     <ul id="taskList"></ul>
+    <button id="exportBtn" class="btn">Export All</button>
+    <!-- <button id="importBtn" class="btn">Import Tasks</button> -->
+    <label for="importBtn" class="btn">Import Tasks</label>
+    <input id="importBtn" type="file" style="position: fixed; top: -100em">
 
     <!-- Scripts -->
+    <script
+    src="http://code.jquery.com/jquery-3.2.1.js"
+    integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous"></script>
     <script src="js/event.js"></script>
     <script src="assets/chance.min.js"></script>
+    <script src="assets/download.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/model.js"></script>
     <script src="js/view.js"></script>

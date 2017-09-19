@@ -45,6 +45,29 @@ Model.prototype = {
         }
     },
     /**
+     * Add tasks from list of tasks.
+     * 
+     * @param {Array} list the list of tasks
+     * @param {Boolean} override if set to true clear the tasks list first
+     */
+    addTaskList(list, override) {
+        if (override) {
+            for (var task of this.tasks) 
+                this.taskRemoved.notifyAll(task.id)
+
+            this.tasks = []
+        }
+
+        for (var task of list) {
+            if (this.findTaskById(task.id) == null) {
+                this.tasks.push(task)
+
+                this.taskCreated.notifyAll(task)
+                this.taskStateChanged.notifyAll(task.id, task.done)
+            }
+        }
+    },
+    /**
      * Remove task from the tasks list.
      * 
      * @param {String} id the id of the task to remove

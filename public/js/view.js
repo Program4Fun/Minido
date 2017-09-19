@@ -2,6 +2,8 @@ function View(model) {
     // DOM Elements.
     this.userInput = document.getElementById('taskInput')
     this.taskList = document.getElementById('taskList')
+    this.exportBtn = document.getElementById('exportBtn')
+    this.importBtn = document.getElementById('importBtn')
 
     // Properties.
     this.model = model
@@ -38,7 +40,7 @@ View.prototype = {
         label.appendChild(document.createTextNode(task.title))
         var d = document.createElement('button')
         d.appendChild(document.createTextNode('X')) 
-        d.onclick = this.removeTask.bind(this, d)
+        d.onclick = this.model.removeTask.bind(this.model, task.id)
         listItem.appendChild(label)
         listItem.appendChild(d) 
 
@@ -47,8 +49,9 @@ View.prototype = {
     /**
      * Remove task from the tasks list.
      */
-    removeTask(elem) {
-        this.taskList.removeChild(elem.parentElement)
+    removeTask(id) {
+        var elem = document.getElementById(id)
+        this.taskList.removeChild(elem)
     },
     /**
      * Change task item checked state based on task done state.
@@ -61,7 +64,11 @@ View.prototype = {
         var cb = listItem.querySelector('input[type="checkbox"]')
 
         cb.setAttribute('checked', state)
-        listItem.classList.toggle('done')
+        if (state) {
+            listItem.classList.add('done')
+        } else {
+            listItem.classList.remove('done')
+        }
     }
 }
 
